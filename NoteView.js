@@ -6,11 +6,11 @@ export class NoteView {
     }
 
     renderNote(){
-        return '
+        return `
         <div>
             <div draggable='true'></div>
             <div><textarea></textarea></div>
-        </div>';
+        </div>`
     }
 
     createElement(){

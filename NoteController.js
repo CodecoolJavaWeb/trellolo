@@ -11,4 +11,14 @@ export class NoteController{
         localStorage.save();
     }
 
+    handleContentChange(element){
+        this.note.content = element.target.innerText;
+        localStorage.save();
+    }
+
+    handleDragStart(element){
+        
+    } 
+
+
 }

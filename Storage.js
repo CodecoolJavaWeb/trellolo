@@ -29,4 +29,4 @@ class Storage {
 
 }
 
-export let storage = new Storage();
+export let localStorage = new Storage();
