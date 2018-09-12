@@ -1,4 +1,4 @@
-import { NoteView } from "./NoteView";
+import { NoteView } from "./Note/NoteView";
 
 
 

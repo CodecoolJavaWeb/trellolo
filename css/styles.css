@@ -1,0 +1,55 @@
+body {
+  margin: 0;
+}
+
+#header {
+  display: flex;
+  height: 50px;
+  background-color: lightseagreen;
+  font-weight: bolder;
+  color: white;
+  padding: 15px;
+  justify-content: center;      /*centers log in header*/
+}
+
+#header > h1 {
+  align-self: center;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(500px, auto);
+  margin: 20px;
+}
+
+.list {
+  border: 1px solid black;
+  margin: 0 20px 0 20px;
+  height: 100%;
+}
+
+.note-area {
+  height: 93%;
+  width: 100%;
+}
+
+.add-note-area {
+  align-content: center;
+  height: 7%;
+  width: 100%;
+}
+
+.add-note {
+  display: block;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  border: none;
+  background-color: indianred;
+  cursor: pointer;
+}
+.add-note:hover {
+  background-color: lightcoral;
+  
+}
