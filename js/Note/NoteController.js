@@ -17,7 +17,7 @@ export class NoteController{
     }
 
     handleDeleteNote(e) {
-        e.target.closest('.note').remove();
+        e.target.parentElement.remove();
         localStorage.remove(this.note);
     }
 }
