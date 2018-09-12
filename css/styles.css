@@ -9,6 +9,7 @@ body {
   font-weight: bolder;
   color: white;
   padding: 15px;
+  justify-content: center;      /*centers log in header*/
 }
 
 #header > h1 {
