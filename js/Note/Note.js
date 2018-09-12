@@ -3,10 +3,9 @@ import { Position } from ".Position.js";
 
 export class Note {
 
-    constructor(x, y){
-        this._id = null;
+    constructor(){
+        this._containerId = null;
         this._content = "New content.";
-        this._position = new Position(x, y);
     }
 
 
