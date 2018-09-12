@@ -9,8 +9,8 @@ export class NoteView {
         return 
         `
         <div class="note" style="left: ${this.noteController.note.position.X}px; top: ${this.noteController.note.position.Y}px;" draggable="true">
-            <div id="dragger" class="note-manipulator"></div>
-            <div id="closer" class="note-manipulator">&times;</div>
+            <div class="note-manipulator dragger"></div>
+            <div class="note-manipulator closer">&times;</div>
             <div><textarea conteneditable = "true">${this.noteController.note.content}</textarea></div>
         </div>`;
     } 
