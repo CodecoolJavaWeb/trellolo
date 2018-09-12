@@ -7,11 +7,13 @@ export class NoteView {
 
     renderNote(){
         return 
-        `<div draggable="true">
-            <div class="dragger"></div>
+        `
+        <div class="note" style="left: ${this.noteController.note.position.X}px; top: ${this.noteController.note.position.Y}px;" draggable="true">
+            <div id="dragger" class="note-manipulator"></div>
+            <div id="closer" class="note-manipulator">&times;</div>
             <div><textarea conteneditable = "true">${this.noteController.note.content}</textarea></div>
         </div>`;
-    }
+    } 
 
     createElement(){
         let element = document.createElement('template');
@@ -21,8 +23,9 @@ export class NoteView {
 
     initializeEventListiners(){
         this.element.getElementsByTagName('textarea')[0].addEventListener('input', this.noteController.handleContentChange.bind(this.noteController));
-        
-        let dragger = this.element.getFirstChild();
+        this.element.getElementById('closer').addEventListener('click', this.noteController.handleDeleteNote.bind(this.noteController));
+
+        let dragger = this.element.getElementById('dragger');
         dragger.addEventListener('dragstart', this.noteController.handleDragStart.bind(this.noteController));
         dragger.addEventListener('dragend', this.noteController.handleDragEnd.bind(this.noteController));
     }

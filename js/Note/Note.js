@@ -5,7 +5,6 @@ export class Note {
 
     constructor(x, y){
         this._id = null;
-        this._title = "New note.";
         this._content = "New content.";
         this._position = new Position(x, y);
     }
@@ -27,14 +26,6 @@ export class Note {
 
     set id(value){
         this._id = value;
-    }
-
-    get title(){
-        return this._title;
-    }
-
-    set title(newTitle){
-        this._title = newTitle;
     }
 
     get content(){
