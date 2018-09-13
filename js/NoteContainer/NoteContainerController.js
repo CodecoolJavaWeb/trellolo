@@ -33,17 +33,9 @@ export class NoteContainerController{
         let note = new Note(containerId);
         let noteController = new NoteController(note);
         let noteView = new NoteView(noteController);
-<<<<<<< HEAD
-        let container = document.getElementById(containerId).firstChild;
         console.log(container.childElementCount);
         if (container.childElementCount <= 4) {
             container.appendChild(noteView.element);
         }
-=======
-        let container = document.getElementById(containerId);
-        container.getElementsByClassName("note-area")[0].appendChild(noteView.element);
-       
->>>>>>> 0303609a0e6591b3cbb80cb454a35df022e3d8dc
       }
-
-}
+    }
