@@ -32,12 +32,31 @@ let container = document.getElementsByClassName("container")[0];
 // }
 
 
-function handleNewContainer(){
-    for(let i = 0; i < 3; i++) {
-        let noteContainer = new NoteContainer(i);
-        let noteContainerController = new NoteContainerController(noteContainer);
-        let noteContainerView = new NoteContainerView(noteContainerController);
-        container.appendChild(noteContainerView.element);
-    }
+// function handleNewContainer(){
+    
+//     for(let i = 0; i < 3; i++) {
+//         let noteContainer = new NoteContainer(i);
+//         let noteContainerController = new NoteContainerController(noteContainer);
+//         let noteContainerView = new NoteContainerView(noteContainerController);
+//         container.appendChild(noteContainerView.element);
+//     }
 
+// }
+
+function handleNewContainer() {
+    let containerIterator = storage.containers.length + 1;
+    let noteContainer = new NoteContainer(containerIterator);
+    let noteContainerController = new NoteContainerController(noteContainer);
+    let noteContainerView = new NoteContainerView(noteContainerController);
+    container.appendChild(noteContainerView.element);   
 }
+
+
+
+// let addButton = document.getElementsByClassName("list");
+
+// addButton.addEventListener('click', getButtonId);
+
+// function getButtonId() {
+//     console.log(this);
+// }
