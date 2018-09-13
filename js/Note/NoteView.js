@@ -6,13 +6,11 @@ export class NoteView {
     }
 
     renderNote(){
-        return 
-        `
-        <div class="note" style="left: ${this.noteController.note.position.X}px; top: ${this.noteController.note.position.Y}px;" draggable="true">
-            <div class="note-manipulator dragger"></div>
-            <div class="note-manipulator closer">&times;</div>
-            <div><textarea conteneditable = "true">${this.noteController.note.content}</textarea></div>
-        </div>`;
+        return `<div class="note" style="left: ${this.noteController.note.position.X}px; top: ${this.noteController.note.position.Y}px;" draggable="true">
+                    <div class="note-manipulator dragger"></div>
+                    <div class="note-manipulator closer">&times;</div>
+                    <div><textarea conteneditable = "true">${this.noteController.note.content}</textarea></div>
+                </div>`;
     } 
 
     createElement(){
