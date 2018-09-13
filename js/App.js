@@ -13,9 +13,8 @@ import { NoteContainerView } from "./NoteContainer/NoteContainerView.js";
 //     let noteView = new NoteView(noteController);
 //     container.appendChild(noteView.element);
 // }
-let addButtonController = new AddButtonController();
 
-let mainButton = document.getElementsByTagName("h1")[0].addEventListener("click", handleNewContainer);
+window.addEventListener("load", handleNewContainer);
 let container = document.getElementsByClassName("container")[0];
 
 // document.getElementsByClassName('add-note')[0].addEventListener("click", addButtonController.handleClick.bind(addButtonController, containerId));
@@ -32,12 +31,24 @@ let container = document.getElementsByClassName("container")[0];
 // }
 
 
+localStorage.clear();
+
+let containerIterator=0;
 function handleNewContainer(){
-    for(let i = 0; i < 3; i++) {
-        let noteContainer = new NoteContainer(i);
+    // for(let i = 0; i < 3; i++) {
+    //     let noteContainer = new NoteContainer(i);
+    //     let noteContainerController = new NoteContainerController(noteContainer);
+    //     let noteContainerView = new NoteContainerView(noteContainerController);
+    //     container.appendChild(noteContainerView.element);
+    // }
+    while(containerIterator < 3) {
+        let noteContainer = new NoteContainer(containerIterator);
         let noteContainerController = new NoteContainerController(noteContainer);
         let noteContainerView = new NoteContainerView(noteContainerController);
         container.appendChild(noteContainerView.element);
+        containerIterator++;
     }
-
+    
 }
+
+

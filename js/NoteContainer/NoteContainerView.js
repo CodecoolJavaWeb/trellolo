@@ -5,6 +5,7 @@ export class NoteContainerView {
     constructor(noteContainerController){
         this.noteContainerController = noteContainerController;
         this.element = this.createElement();
+        this.initializeEventListeners();
     }
 
     // renderContainer(){
@@ -28,9 +29,15 @@ export class NoteContainerView {
         return element.content.firstChild;
     }
 
-    initializeEventListeners(){
-                
+    approveElement() {
+        console.log('the right one');
     }
+
+    initializeEventListeners(){
+        let check = this.element.getElementsByClassName('add-note')[0];
+        check.addEventListener('click', function() {console.log(this.parentElement.parentElement);});
+    }
+    
 
 
 }
