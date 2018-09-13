@@ -20,12 +20,12 @@ export class NoteView {
     }
 
     initializeEventListiners(){
-        this.element.getElementsByTagName('textarea')[0].addEventListener('input', this.noteController.handleContentChange.bind(this.noteController));
-        this.element.getElementById('closer').addEventListener('click', this.noteController.handleDeleteNote.bind(this.noteController));
+        // this.element.getElementsByTagName('textarea')[0].addEventListener('input', this.noteController.handleContentChange.bind(this.noteController));
+        // this.element.getElementById('closer').addEventListener('click', this.noteController.handleDeleteNote.bind(this.noteController));
 
-        let dragger = this.element.getElementById('dragger');
-        dragger.addEventListener('dragstart', this.noteController.handleDragStart.bind(this.noteController));
-        dragger.addEventListener('dragend', this.noteController.handleDragEnd.bind(this.noteController));
+        // let dragger = this.element.getElementById('dragger');
+        // dragger.addEventListener('dragstart', this.noteController.handleDragStart.bind(this.noteController));
+        // dragger.addEventListener('dragend', this.noteController.handleDragEnd.bind(this.noteController));
     }
 
 }
