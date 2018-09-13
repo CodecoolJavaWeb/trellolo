@@ -5,13 +5,11 @@ export class NoteContainer {
     this._containerId = id;
   }
 
-//   static createContainerFromObject(object){
-//     let note = new Note();
-//     Object.assign(note, object);
-//     Object.assign(position, object._position)
-//     note.position = position;
-//     return note;
-// }
+  static createContainerFromObject(object){
+    let container = new NoteContainer();
+    Object.assign(container, object);
+    return container;
+}
 
   get list() {
     return this._list;
