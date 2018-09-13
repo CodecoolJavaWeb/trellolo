@@ -1,7 +1,19 @@
+import {NoteContainer} from "../NoteContainer/NoteContainer.js";
+
 class Storage {
     constructor() {
         this.containers = new Array();
         this.load();
+    }
+
+    add(container){
+        this.containers.push(container);
+        this.save();
+    }
+
+    remove(container){
+        this.containers.remove(container);
+        this.save();
     }
 
     save(){
