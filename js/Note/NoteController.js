@@ -1,9 +1,9 @@
-
+import { storage } from "../Storage/Storage.js";
 
 export class NoteController{
     constructor(note){
         this.note = note;
-        localStorage.add(this.note);
+        storage.add(this.note);
     }
 
     handleDragStart(e) {
@@ -13,11 +13,11 @@ export class NoteController{
 
     handleChangeNote(e) {
         this.note.content = e.target.innerText;
-        localStorage.save();
+        storage.save();
     }
 
     handleDeleteNote(e) {
         e.target.parentElement.remove();
-        localStorage.remove(this.note);
+        storage.remove(this.note);
     }
 }
