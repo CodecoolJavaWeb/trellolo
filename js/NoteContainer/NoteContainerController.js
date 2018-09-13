@@ -29,16 +29,12 @@ export class NoteContainerController{
     }
 
     handleClick(e) {
-        console.log(e + 'event');
-        console.log('we r here');
         let containerId = this.noteContainer.containerId;
-        console.log(containerId + 'id');
         let note = new Note(containerId);
         let noteController = new NoteController(note);
         let noteView = new NoteView(noteController);
-        let container = document.getElementById(containerId);
+        let container = document.getElementById(containerId).firstChild;
         container.appendChild(noteView.element);
-       
       }
 
 }

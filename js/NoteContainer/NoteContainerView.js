@@ -17,11 +17,11 @@ export class NoteContainerView {
     // }
 
     renderContainer(){
-        return `<div class="list" id=${this.noteContainerController.noteContainer.containerId}>
-        <div class="note-area"></div>
-        <div class="add-note-area">
-          <button class="add-note">ADD</button>
-        </div>`
+        return `<div class="list" id=${this.noteContainerController.noteContainer.containerId}
+        ><div class="note-area"></div
+        ><div class="add-note-area"
+          ><button class="add-note">ADD</button
+        ></div>`
     }
 
     createElement(){
@@ -37,11 +37,4 @@ export class NoteContainerView {
 
     }
 
-    // getContainerId() {
-    //     let container = this.parentNode.parentNode;
-    //     this.id = container.getAttribute('id');
-    //     console.log(this.id);
-    //     return this.id;
-    // }
-    
 }
