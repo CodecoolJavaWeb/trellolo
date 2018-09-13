@@ -1,9 +1,20 @@
 import {Note} from "../Note/Note.js";
+import { NoteContainer } from "../NoteContainer/NoteContainer.js";
 
 class Storage {
     constructor(){
         this.containers = new Array();
         this.load();    
+    }
+
+    add(container){
+        this.containers.push(container);
+        this.save();
+    }
+
+    remove(container){
+        this.containers.remove(container);
+        this.save();
     }
 
     save(){
@@ -14,7 +25,7 @@ class Storage {
         let containers = JSON.parse(localStorage.getItem('containers'));
         if(containers !== null){
             for(let container of containers){
-                this.containers.add(NoteContainer.createFromObject(container));
+                this.containers.push(NoteContainer.createContainerFromObject(container));
             }
         }
     }

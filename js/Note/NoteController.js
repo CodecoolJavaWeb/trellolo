@@ -1,4 +1,5 @@
 import {storage} from "../Storage/Storage.js";
+import { Note } from "../Note/Note.js";
 
 export class NoteController{
     constructor(note, containerId){
