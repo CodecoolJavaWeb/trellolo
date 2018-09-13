@@ -1,4 +1,6 @@
-import { NoteView } from "./Note/NoteView";
+import { NoteView } from "./Note/NoteView.js";
+import { storage } from "./Storage/Storage.js";
+
 
 // for(let note of storage.notes){
 //     let noteController = new noteController(note);
