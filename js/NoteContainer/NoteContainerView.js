@@ -17,11 +17,19 @@ export class NoteContainerView {
     // }
 
     renderContainer(){
+<<<<<<< HEAD
         return `<div class="list" id=${this.noteContainerController.noteContainer.containerId} ondrop="hanldeDrop(event)" ondragoover="allowDrop(event)"
         ><div class="note-area"></div
         ><div class="add-note-area"
           ><button class="add-note">ADD</button
         ></div>`
+=======
+        return `<div class="list" id="${this.noteContainerController.noteContainer.containerId}">
+        <div class="note-area"></div>
+        <div class="add-note-area">
+          <button class="add-note">ADD</button>
+        </div>`
+>>>>>>> 0303609a0e6591b3cbb80cb454a35df022e3d8dc
     }
 
     createElement(){

@@ -46,3 +46,9 @@ function handleNewContainer(){
 }
 
 
+
+function addNewNoteToContainer(){
+
+}
+
+
