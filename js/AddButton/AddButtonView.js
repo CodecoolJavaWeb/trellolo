@@ -7,6 +7,10 @@ export class AddButtonView {
     registerEventListeners() {
     const containerId = this.element.getElementsByClassName('note-area')[0].containerId;
     this.element.getElementsByClassName('add-note')[0].addEventListener("click", this.addButtonController.handleDblClick.bind(this.addButtonController, containerId));
+
+
+    
+
 }
 
   
