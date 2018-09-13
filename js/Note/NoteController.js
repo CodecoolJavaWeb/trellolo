@@ -1,9 +1,9 @@
 
 
 export class NoteController{
-    constructor(note){
+    constructor(note, containerId){
         this.note = note;
-        localStorage.add(this.note);
+        localStorage.getContainerById(containerId).list.push(this.note);
     }
 
     handleDragStart(e) {
