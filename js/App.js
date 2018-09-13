@@ -13,16 +13,16 @@ import { storage } from "./Storage/Storage.js";
 // }
 let addButtonController = new AddButtonController();
 
-// const containerId = document.getElementsByClassName('note-area')[0].containerId;
-// document.getElementsByClassName('add-note')[0].addEventListener("click", console.log('sdfd'));
-// document.getElementsByClassName('add-note')[0].addEventListener("click", addButtonController.handleDblClick.bind(addButtonController, containerId));
+const containerId = document.getElementsByClassName('note-area')[0].containerId;
+document.getElementsByClassName('add-note')[0].addEventListener("click", console.log('sdfd'));
+document.getElementsByClassName('add-note')[0].addEventListener("click", addButtonController.handleClick.bind(addButtonController, containerId));
 
-// for (let i=0; i<storage.containers.length; i++) {
-//     let noteContainer = new NoteContainer(i);
-//     for(let note of noteContainer){
-//         let noteController = new NoteController(note);
-//         let noteView = new NoteView(noteController);
-//         container.appendChild(noteView.element);
-//     }
-// }
+for (let i=0; i<storage.containers.length; i++) {
+    let noteContainer = new NoteContainer(i);
+    for(let note of noteContainer){
+        let noteController = new NoteController(note);
+        let noteView = new NoteView(noteController);
+        container.appendChild(noteView.element);
+    }
+}
 
