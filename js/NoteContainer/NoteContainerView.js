@@ -17,7 +17,7 @@ export class NoteContainerView {
     // }
 
     renderContainer(){
-        return `<div class="list" id=${this.noteContainerController.noteContainer.containerId}
+        return `<div class="list" id=${this.noteContainerController.noteContainer.containerId} ondrop="hanldeDrop(event)" ondragoover="allowDrop(event)"
         ><div class="note-area"></div
         ><div class="add-note-area"
           ><button class="add-note">ADD</button
