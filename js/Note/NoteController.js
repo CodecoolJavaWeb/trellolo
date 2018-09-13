@@ -4,7 +4,7 @@ import { Note } from "../Note/Note.js";
 export class NoteController{
     constructor(note, containerId){
         this.note = note;
-        storage.getContainerById(containerId).list.push(this.note);
+        // storage.getContainerById(containerId).list.push(this.note);
     }
 
     handleChangeNote(e) {
@@ -16,4 +16,5 @@ export class NoteController{
         e.target.parentElement.remove();
         storage.remove(this.note);
     }
+
 }

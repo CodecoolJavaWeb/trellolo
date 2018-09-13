@@ -7,6 +7,7 @@ import { AddButtonController } from "./AddButton/AddButtonController.js";
 import { storage } from "./Storage/Storage.js";
 import { NoteContainerController } from "./NoteContainer/NoteContainerController.js";
 import { NoteContainerView } from "./NoteContainer/NoteContainerView.js";
+import { AddButtonView } from "./AddButton/AddButtonView.js";
 
 // for(let note of storage.notes){
 //     let noteController = new noteController(note);
@@ -42,7 +43,6 @@ function handleNewContainer(){
         container.appendChild(noteContainerView.element);
         containerIterator++;
     }
-    
 }
 
 

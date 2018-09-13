@@ -6,6 +6,7 @@ export class NoteContainerView {
         this.noteContainerController = noteContainerController;
         this.element = this.createElement();
         this.initializeEventListeners();
+        let id = null;
     }
 
     // renderContainer(){
@@ -29,22 +30,18 @@ export class NoteContainerView {
         return element.content.firstChild;
     }
 
-    approveElement() {
-        console.log('the right one');
-    }
-
     initializeEventListeners(){
-        consol.log(this.element.getElementById("0"))
-        this.element.getElementById("0");
-        // let check = this.element.getElementsByClassName('add-note')[0];
-        // check.addEventListener('click', function(e) {console.log(e.target.parentNode.parentNode.id);});
+        let check = this.element.getElementsByClassName('add-note')[0];
+        // check.addEventListener('click', this.getContainerId);
+        check.addEventListener('click', this.noteContainerController.handleClick.bind(this.noteContainerController));
+
     }
 
-    getContainerId(e) {
-        let containerId = e.target.parentNode.parentNode.id;
-        console.log(containerId);
-    }
+    // getContainerId() {
+    //     let container = this.parentNode.parentNode;
+    //     this.id = container.getAttribute('id');
+    //     console.log(this.id);
+    //     return this.id;
+    // }
     
-
-
 }
