@@ -21,5 +21,9 @@ export class NoteContainerController{
         e.preventDefault();
     }
 
+    detectContainer() {
+        let elementBelow = document.elementFromPoint(event.clientX, event.clientY);
+    }
+
 
 }
