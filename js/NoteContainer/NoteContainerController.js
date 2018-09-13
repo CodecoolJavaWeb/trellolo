@@ -1,9 +1,9 @@
-
+import {storage} from "../Storage/Storage.js";
 
 export class NoteContainerController{
     constructor(noteContainer){
         this.noteContainer = noteContainer;
-        localStorage.add(this.noteContainer);
+        storage.add(this.noteContainer);
     }
 
 
