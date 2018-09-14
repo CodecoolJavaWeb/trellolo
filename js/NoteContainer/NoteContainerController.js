@@ -33,9 +33,12 @@ export class NoteContainerController{
         let note = new Note(containerId);
         let noteController = new NoteController(note);
         let noteView = new NoteView(noteController);
+        let container = document.getElementById(containerId).firstChild;
         console.log(container.childElementCount);
         if (container.childElementCount <= 4) {
             container.appendChild(noteView.element);
         }
+        this.noteContainer.list.push(note);
+        storage.save();
       }
     }

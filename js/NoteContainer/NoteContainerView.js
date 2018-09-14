@@ -31,8 +31,8 @@ export class NoteContainerView {
     }
 
     initializeEventListeners(){
+
         let check = this.element.getElementsByClassName('add-note')[0];
-        // check.addEventListener('click', this.getContainerId);
         check.addEventListener('click', this.noteContainerController.handleClick.bind(this.noteContainerController));
 
     }

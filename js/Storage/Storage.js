@@ -19,6 +19,7 @@ class Storage {
 
     save(){
         localStorage.clear();
+        this.containers.length = 0;
         localStorage.setItem('containers', JSON.stringify([...this.containers]))
     }
 

@@ -19,7 +19,15 @@ export class NoteView {
         return element.content.firstChild;
     }
 
+    deleteElement() {
+        // const noteContains = this.nextSibling.getElementsByTagName('textarea')[0].innerHTML;
+        // localStorage.removeItem(noteContains);
+        this.parentNode.remove();
+    }
+
     initializeEventListiners(){
+        console.log(this.element.firstChild.nextSibling);
+        this.element.firstChild.nextSibling.addEventListener('click', this.deleteElement);
         // this.element.getElementsByTagName('textarea')[0].addEventListener('input', this.noteController.handleContentChange.bind(this.noteController));
         // this.element.getElementById('closer').addEventListener('click', this.noteController.handleDeleteNote.bind(this.noteController));
 
